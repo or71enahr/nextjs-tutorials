@@ -1,5 +1,5 @@
-import React from "react";
-import { css } from "@emotion/css";
+import React from 'react';
+import { css } from '@emotion/css';
 
 interface ButtonProps {
   /**
@@ -13,7 +13,7 @@ interface ButtonProps {
   /**
    * How large should the button be?
    */
-  size?: "small" | "medium" | "large";
+  size?: 'small' | 'medium' | 'large';
   /**
    * Button contents
    */
@@ -29,7 +29,7 @@ interface ButtonProps {
  */
 export const Button = ({
   primary = false,
-  size = "medium",
+  size = 'medium',
   backgroundColor,
   label,
   ...props
@@ -47,7 +47,7 @@ export const Button = ({
 };
 
 const storybookButton = (primary: boolean, size: string) => css`
-  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
   border: 0;
   border-radius: 3em;
@@ -66,17 +66,17 @@ const storybookButton = (primary: boolean, size: string) => css`
         box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
       `}
 
-  ${size === "large" &&
+  ${size === 'large' &&
   css`
     font-size: 16px;
     padding: 12px 24px;
   `}
-  ${size === "medium" &&
+  ${size === 'medium' &&
   css`
     font-size: 14px;
     padding: 11px 20px;
   `}
-  ${size === "small" &&
+  ${size === 'small' &&
   css`
     font-size: 12px;
     padding: 10px 16px;
